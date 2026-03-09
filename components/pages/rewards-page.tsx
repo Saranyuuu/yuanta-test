@@ -11,7 +11,6 @@ import {
   Globe,
   Headphones,
   BookOpen,
-  LogOut,
   CreditCard,
   ArrowLeft,
   ChevronLeft,
@@ -20,8 +19,7 @@ import { Header } from '@/components/layout';
 import { RewardsModal } from '@/components/rewards';
 import { ProfileMenuItem } from '@/components/profile/profile-menu-item';
 import { ProfilePointsCard } from '@/components/profile/profile-points-card';
-import { mockUser, mockPoints } from '@/lib/mock-data';
-import { Button } from '../ui/button';
+import { mockUser, mockPoints } from '@/mock/mock-data';
 
 export function RewardsPage() {
   const [isRewardsOpen, setIsRewardsOpen] = useState(false);
@@ -63,7 +61,7 @@ export function RewardsPage() {
       rightElement: (
         <div className="flex items-center gap-2">
           <Image
-            src="/Badge/TH.png"
+            src="/badge/TH.png"
             alt="Thai language"
             width={20}
             height={20}
@@ -116,7 +114,7 @@ export function RewardsPage() {
                 {mockUser.badge && (
                   <span className="w-[66px] h-[24px] flex items-center justify-center gap-[2px] xl:mt-2 bg-[#F7EDE2] rounded-[4px] text-[12px] text-[#D35533] font-medium">
                     <Image
-                      src="/Badge/badge%20icon.png"
+                      src="/badge/badge%20icon.png"
                       alt="User badge"
                       width={16}
                       height={16}
@@ -170,9 +168,9 @@ export function RewardsPage() {
           </div>
 
           {/* Logout Button */}
-          <Button variant="destructive" className="w-full md:w-[343px] h-[40px] flex items-center justify-center bg-transparent border border-black/10 text-[14px] font-semibold text-[var(--accent-red)] rounded-[8px] hover:bg-[var(--accent-red)]/5 transition-colors font-medium">
+          <button className="w-full md:w-[343px] h-[40px] flex items-center justify-center bg-transparent border border-black/10 text-[14px] font-semibold text-[var(--accent-red)] rounded-[8px] hover:bg-[var(--accent-red)]/5 transition-colors font-medium">
             ออกจากระบบ
-          </Button>
+          </button>
         </div>
       </div>
 

@@ -6,14 +6,7 @@ import { PointsDisplay } from '@/components/shared/points-display';
 import { cn } from '@/lib/utils';
 import { ExchangeCard } from './exchange-card';
 import { ChevronRight, Gift, ShoppingCart } from 'lucide-react';
-
-interface PointsCardProps {
-  points: number;
-  expiryDate: string;
-  tier: 'Bronze' | 'Silver' | 'Gold' | 'Platinum';
-  onClick?: () => void;
-  className?: string;
-}
+import { Button } from '../ui/button';
 
 export function PointsCard({
   points,
@@ -80,7 +73,7 @@ export function PointsCard({
             <ExchangeCard
               icon={
                 <Image
-                  src="/Badge/points-fill.png"
+                  src="/badge/points-fill.png"
                   alt="Points fill"
                   width={40}
                   height={40}

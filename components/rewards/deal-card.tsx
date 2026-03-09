@@ -3,24 +3,7 @@
 import Image from 'next/image';
 import { Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-interface DealCardProps {
-  image: string;
-  title: string;
-  points: number;
-  category: string;
-  dateRange?: string;
-  isUnlimited?: boolean;
-  onClick?: () => void;
-  className?: string;
-}
-
-const categoryColors: Record<string, string> = {
-  'กิจกรรม': 'text-[var(--yuanta-primary)]',
-  'คลังความรู้': 'text-[var(--yuanta-primary)]',
-  'สินค้าพรีเมียม': 'text-[var(--yuanta-primary)]',
-  'ไลฟ์สไตล์': 'text-[var(--yuanta-primary)]',
-};
+import { Button } from '../ui/button';
 
 export function DealCard({
   image,
@@ -61,7 +44,7 @@ export function DealCard({
         <div className="flex items-center justify-between gap-2 mb-2">
           <div className="flex items-center gap-1.5">
             <Image
-              src="/Badge/yuanta-icon-base.png"
+              src="/badge/yuanta-icon-base.png"
               alt="Yuanta icon"
               width={16}
               height={16}
@@ -71,7 +54,7 @@ export function DealCard({
               {points} Points
             </span>
           </div>
-          <span className={cn('w-auto h-auto flex items-center justify-center text-[9px] font-medium bg-[#F3F8FE] rounded-[4px] px-[4px] py-[2px]', categoryColors[category] || 'text-[#095EC4]')}>
+          <span className={cn('w-auto h-auto flex items-center justify-center text-[9px] font-medium bg-[#F3F8FE] rounded-[4px] px-[4px] py-[2px] text-[var(--yuanta-primary)]')}>
             {category}
           </span>
         </div>

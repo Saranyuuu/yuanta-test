@@ -1,13 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-
-interface ExchangeCardProps {
-  icon: React.ReactNode;
-  label: string;
-  onClick?: () => void;
-  className?: string;
-}
+import { Button } from '../ui/button';
 
 export function ExchangeCard({ icon, label, onClick, className }: ExchangeCardProps) {
   return (

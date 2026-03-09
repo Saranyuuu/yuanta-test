@@ -2,23 +2,14 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Gift, ShoppingCart, ChevronRight, Ticket, X } from 'lucide-react';
-import { ExchangeCard } from './exchange-card';
+import { Ticket, X } from 'lucide-react';
+
 import { DealCard } from './deal-card';
 import { PromoBanner } from './promo-banner';
 import { PointsCard } from './points-card';
 import { Header } from '@/components/layout/header';
-import { mockDeals } from '@/lib/mock-data';
+import { mockDeals } from '@/mock/mock-data';
 import { cn } from '@/lib/utils';
-import { Button } from '../ui/button';
-
-interface RewardsModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  points: number;
-  expiryDate: string;
-  tier: 'Bronze' | 'Silver' | 'Gold' | 'Platinum';
-}
 
 export function RewardsModal({
   isOpen,
@@ -104,10 +95,10 @@ export function RewardsModal({
             <PointsCard points={points} expiryDate={expiryDate} tier={tier} />
           </div>
           {/* My Rewards Button */}
-          <Button className="w-[343px] h-[40px] mx-auto flex items-center justify-center gap-2 bg-white border border-black/10 rounded-[8px] hover:border-[var(--yuanta-primary-light)] hover:shadow-sm transition-all mt-3">
+          <button className="w-[343px] h-[40px] mx-auto flex items-center justify-center gap-2 bg-white border border-black/10 rounded-[8px] hover:border-[var(--yuanta-primary-light)] hover:shadow-sm transition-all mt-3">
             <Ticket className="w-5 h-5 text-[#0A6EE7]" />
             <span className="text-[var(--text-primary)] font-medium">รีวอร์ดของฉัน</span>
-          </Button>
+          </button>
           <div className="max-w-[792px] mx-auto mt-8 px-6 md:px-[64px] xl:px-0">
             {/* Promo Banner */}
             <PromoBanner
@@ -124,7 +115,7 @@ export function RewardsModal({
           <div className="max-w-[792px] mx-auto flex items-center justify-between mb-4 sm:mb-6">
             <div className="flex items-center gap-2">
               <Image
-                src="/Badge/yuanta-icon-dark.png"
+                src="/badge/yuanta-icon-dark.png"
                 alt="Yuanta icon"
                 width={20}
                 height={20}
@@ -134,9 +125,9 @@ export function RewardsModal({
                 Highlight Deals
               </h2>
             </div>
-            <Button variant="link" className="text-[var(--yuanta-primary-accent)] font-semibold text-[14px] hover:underline">
+            <button className="text-[var(--yuanta-primary-accent)] font-semibold text-[14px] hover:underline">
               ดูเพิ่มเติม
-            </Button>
+            </button>
           </div>
 
           {/* Deals Grid */}
@@ -156,6 +147,5 @@ export function RewardsModal({
         </div>
       </div>
     </div>
-
   );
 }

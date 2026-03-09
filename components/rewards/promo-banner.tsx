@@ -35,7 +35,7 @@ export function PromoBanner({
       {/* Decorative Icon */}
       <div className="pointer-events-none absolute -top-6 -right-0 xl:-top-8 w-[120px] h-[120px] drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)]">
         <img
-          src="/point/Yuanta Points Logo.png"
+          src="/Point/Yuanta Points Logo.png"
           alt="Yuanta Points Logo"
           className="w-full h-full object-contain"
         />

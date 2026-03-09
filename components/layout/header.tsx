@@ -19,7 +19,7 @@ export function Header({ showIcons = true, showCloseButton = false, onClose, cla
           <div className="flex items-center gap-2">
             <div className="w-full h-full flex items-center justify-center">
               <img
-                src="/logo/logo yuanta.png"
+                src="/Logo/Logo yuanta.png"
                 alt="Yuanta Securities"
                 className="w-full h-full object-contain"
               />

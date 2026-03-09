@@ -16,7 +16,7 @@ export const mockPoints: PointsData = {
 export const mockDeals: DealItem[] = [
   {
     id: "1",
-    image: "/deal/deal-1.png",
+    image: "/Deal/deal-1.png",
     title: "เข้าร่วมสัมมนา The Hidden Cue วิเคราะห์กราฟผ่านอีกมุมมอง เจาะลึ...",
     points: 200,
     category: "กิจกรรม",
@@ -24,7 +24,7 @@ export const mockDeals: DealItem[] = [
   },
   {
     id: "2",
-    image: "/deal/deal-2.jpg",
+    image: "/Deal/deal-2.jpg",
     title: "รีเซ็ตพอร์ตก่อนตลาดจะฟื้น เตรียมพร้อมรับโอกาสใหม่ในไตรมา...",
     points: 200,
     category: "คลังความรู้",
@@ -32,7 +32,7 @@ export const mockDeals: DealItem[] = [
   },
   {
     id: "3",
-    image: "/deal/deal-3.jpg",
+    image: "/Deal/deal-3.jpg",
     title: "แลกรับ Xiaomi Mi Smart Camera รุ่น C300",
     points: 300,
     category: "สินค้าพรีเมียม",
@@ -40,7 +40,7 @@ export const mockDeals: DealItem[] = [
   },
   {
     id: "4",
-    image: "/deal/deal-4.png",
+    image: "/Deal/deal-4.png",
     title: "LINE MAN: Get 100 THB discount with no.min spend",
     points: 100,
     category: "ไลฟ์สไตล์",

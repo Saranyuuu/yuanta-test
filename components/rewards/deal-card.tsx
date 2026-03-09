@@ -44,7 +44,7 @@ export function DealCard({
         <div className="flex items-center justify-between gap-2 mb-2">
           <div className="flex items-center gap-1.5">
             <Image
-              src="/badge/yuanta-icon-base.png"
+              src="/Badge/yuanta-icon-base.png"
               alt="Yuanta icon"
               width={16}
               height={16}

@@ -12,7 +12,7 @@ export function PointsDisplay({
       {showIcon && (
         <div className="text-[var(--yuanta-primary)]">
           <Image
-            src="/badge/yuanta-icon.png"
+            src="/Badge/yuanta-icon.png"
             alt="Yuanta icon"
             width={20}
             height={20}

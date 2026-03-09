@@ -115,7 +115,7 @@ export function RewardsModal({
           <div className="max-w-[792px] mx-auto flex items-center justify-between mb-4 sm:mb-6">
             <div className="flex items-center gap-2">
               <Image
-                src="/badge/yuanta-icon-dark.png"
+                src="/Badge/yuanta-icon-dark.png"
                 alt="Yuanta icon"
                 width={20}
                 height={20}

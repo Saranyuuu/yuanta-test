@@ -73,7 +73,7 @@ export function PointsCard({
             <ExchangeCard
               icon={
                 <Image
-                  src="/badge/points-fill.png"
+                  src="/Badge/points-fill.png"
                   alt="Points fill"
                   width={40}
                   height={40}

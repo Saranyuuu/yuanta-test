@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 interface PointsDisplayProps {
@@ -14,20 +15,19 @@ export function PointsDisplay({
   className,
 }: PointsDisplayProps) {
 
-  const iconSizes = {
-    sm: 'w-5 h-5',
-    md: 'w-7 h-7 sm:w-8 sm:h-8',
-    lg: 'w-9 h-9 sm:w-10 sm:h-10',
-  };
+
 
   return (
     <div className={cn('flex items-center justify-center gap-2', className)}>
       {showIcon && (
-        <div className={cn('text-[var(--yuanta-primary)]', iconSizes[size])}>
-          <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-            <circle cx="12" cy="12" r="10" fillOpacity="0.2" />
-            <path d="M8 12L12 8L16 12L12 16Z" />
-          </svg>
+        <div className="text-[var(--yuanta-primary)]">
+          <Image
+            src="/Badge/yuanta-icon.png"
+            alt="Yuanta icon"
+            width={20}
+            height={20}
+            className="w-[20px] h-[20px]"
+          />
         </div>
       )}
       <span

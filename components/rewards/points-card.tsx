@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { TierBadge } from '@/components/shared/tier-badge';
 import { PointsDisplay } from '@/components/shared/points-display';
 import { cn } from '@/lib/utils';
@@ -78,9 +79,13 @@ export function PointsCard({
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <ExchangeCard
               icon={
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                </svg>
+                <Image
+                  src="/Badge/points-fill.png"
+                  alt="Points fill"
+                  width={40}
+                  height={40}
+                  className="w-full h-full"
+                />
               }
               label="หยวนต้า มาร์เก็ตเพลส"
             />

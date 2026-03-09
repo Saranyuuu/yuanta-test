@@ -60,10 +60,13 @@ export function DealCard({
 
         <div className="flex items-center justify-between gap-2 mb-2">
           <div className="flex items-center gap-1.5">
-            <svg viewBox="0 0 24 24" className="w-4 h-4 text-[var(--yuanta-primary)]" fill="currentColor">
-              <circle cx="12" cy="12" r="10" fillOpacity="0.2" />
-              <path d="M8 12L12 8L16 12L12 16Z" />
-            </svg>
+            <Image
+              src="/Badge/yuanta-icon-base.png"
+              alt="Yuanta icon"
+              width={16}
+              height={16}
+              className="w-4 h-4"
+            />
             <span className="text-[var(--yuanta-primary-accent)] font-semibold text-[12px]">
               {points} Points
             </span>

@@ -2,6 +2,7 @@
 
 import { Search, MessageSquare, Bell, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
 interface HeaderProps {
   showIcons?: boolean;
@@ -10,7 +11,7 @@ interface HeaderProps {
   className?: string;
 }
 
-export function Header({ showIcons = false, showCloseButton = false, onClose, className }: HeaderProps) {
+export function Header({ showIcons = true, showCloseButton = false, onClose, className }: HeaderProps) {
   return (
     <header className={cn('bg-white border-b border-[var(--border)]', className)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,32 +29,33 @@ export function Header({ showIcons = false, showCloseButton = false, onClose, cl
 
           {/* Right Icons */}
           {showIcons && (
-            <div className="flex items-center gap-3 sm:gap-4">
-              <button className="p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors">
-                <Search className="w-5 h-5 text-[var(--text-secondary)]" />
-              </button>
-              <button className="p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors">
-                <MessageSquare className="w-5 h-5 text-[var(--text-secondary)]" />
-              </button>
-              <button className="p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors relative">
-                <Bell className="w-5 h-5 text-[var(--text-secondary)]" />
-                <span className="absolute top-1 right-1 w-2 h-2 bg-[var(--accent-red)] rounded-full" />
-              </button>
-              <button className="w-9 h-9 bg-[var(--yuanta-primary)] rounded-full flex items-center justify-center text-white font-medium">
+            <div className="flex items-center gap-4">
+              <div className="w-9 h-9 p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors">
+                <Search className="w-6 h-6 text-[var(--yuanta-primary-accent)]" />
+              </div>
+              <div className="w-9 h-9 p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors">
+                <MessageSquare className="w-6 h-6 text-[var(--yuanta-primary-accent)]" />
+              </div>
+              <div className="w-9 h-9 p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors relative">
+                <Bell className="w-6 h-6 fill-[var(--yuanta-primary-accent)] text-[var(--yuanta-primary-accent)]" />
+                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[var(--accent-red)] rounded-full" />
+              </div>
+              <div className="w-[32px] h-[32px] bg-gradient-to-r from-[#B5D3F8] to-[#E6F6FB] border border-black/8 rounded-full flex items-center justify-center text-[16px] text-[#00A2D9] font-bold">
                 J
-              </button>
+              </div>
             </div>
           )}
 
           {/* Close Button */}
           {showCloseButton && onClose && (
-            <button
+            <Button
+              variant="ghost"
               onClick={onClose}
-              className="p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors"
+              className="p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors cursor-pointer"
               aria-label="Close"
             >
               <X className="w-6 h-6 text-[var(--text-secondary)]" />
-            </button>
+            </Button>
           )}
         </div>
       </div>

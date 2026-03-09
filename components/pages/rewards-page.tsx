@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import {
   User,
@@ -61,7 +62,13 @@ export function RewardsPage() {
       showArrow: false,
       rightElement: (
         <div className="flex items-center gap-2">
-          <span className="text-xl">🇹🇭</span>
+          <Image
+            src="/Badge/TH.png"
+            alt="Thai language"
+            width={20}
+            height={20}
+            className="w-5 h-5"
+          />
           <span className="text-[var(--text-secondary)] text-[16px] font-bold">TH</span>
         </div>
       ),
@@ -108,7 +115,13 @@ export function RewardsPage() {
               <div>
                 {mockUser.badge && (
                   <span className="w-[66px] h-[24px] flex items-center justify-center gap-[2px] xl:mt-2 bg-[#F7EDE2] rounded-[4px] text-[12px] text-[#D35533] font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D35533]" />
+                    <Image
+                      src="/Badge/badge%20icon.png"
+                      alt="User badge"
+                      width={16}
+                      height={16}
+                      className="w-4 h-4"
+                    />
                     {mockUser.badge}
                   </span>
                 )}

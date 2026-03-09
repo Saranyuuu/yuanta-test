@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 interface TierBadgeProps {
@@ -10,13 +11,15 @@ interface TierBadgeProps {
 export function TierBadge({ tier, variant = 'default', className }: TierBadgeProps) {
   return (
     <div
-      className="w-[84px] h-[24px] flex items-center justify-center gap-1.5 rounded-full bg-[#8C4F34] border border-[#FDDDD0] text-[14px] text-[#FFECE5]/90 font-bold"
-
+      className="w-auto h-[24px] flex items-center justify-center gap-1.5 pl-0.5 pr-2 rounded-full bg-[#8C4F34] border border-[#FDDDD0] text-[14px] text-[#FFECE5]/90 font-bold"
     >
-      <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-        <circle cx="12" cy="12" r="10" fillOpacity="0.2" />
-        <path d="M8 12L12 8L16 12L12 16Z" />
-      </svg>
+      <Image
+        src="/Badge/tier-badge.png"
+        alt={`${tier} tier`}
+        width={16}
+        height={16}
+        className="w-[20px] h-[20px]"
+      />
       {tier}
     </div>
   );

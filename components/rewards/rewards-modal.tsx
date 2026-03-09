@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Gift, ShoppingCart, ChevronRight, Ticket, X } from 'lucide-react';
 import { ExchangeCard } from './exchange-card';
@@ -73,7 +74,12 @@ export function RewardsModal({
         )}
       >
         {/* Header with Close Button (desktop only) */}
-        <Header showCloseButton onClose={handleClose} className="sticky top-0 z-20 hidden lg:block" />
+        <Header
+          showIcons={false}
+          showCloseButton
+          onClose={handleClose}
+          className="sticky top-0 z-20 hidden lg:block"
+        />
 
         {/* Hero Section */}
         <div className="bg-gradient-to-b from-[#f5d4c0] via-[#ffe6dc] to-[#ffffff] pt-0 pb-10 sm:pt-0 sm:pb-14 lg:pt-6">
@@ -117,17 +123,20 @@ export function RewardsModal({
         <div className="w-full mx-auto bg-[var(--bg-secondary)] pt-6 pb-10 px-6">
           <div className="max-w-[792px] mx-auto flex items-center justify-between mb-4 sm:mb-6">
             <div className="flex items-center gap-2">
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-[var(--yuanta-primary)]" fill="currentColor">
-                <circle cx="12" cy="12" r="10" fillOpacity="0.2" />
-                <path d="M8 12L12 8L16 12L12 16Z" />
-              </svg>
+              <Image
+                src="/Badge/yuanta-icon-dark.png"
+                alt="Yuanta icon"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
               <h2 className="text-black/75% font-bold text-[16px]">
                 Highlight Deals
               </h2>
             </div>
-            <button className="text-[var(--yuanta-primary-accent)] font-semibold text-[14px] hover:underline">
+            <Button variant="link" className="text-[var(--yuanta-primary-accent)] font-semibold text-[14px] hover:underline">
               ดูเพิ่มเติม
-            </button>
+            </Button>
           </div>
 
           {/* Deals Grid */}

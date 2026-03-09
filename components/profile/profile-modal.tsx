@@ -128,7 +128,7 @@ export function ProfileModal({ isOpen, onClose, userData }: ProfileModalProps) {
             />
             <ProfileMenuItem
               icon={<CreditCard className="w-full h-full" />}
-              label="ภาริจัดการบัญชีลงทุน"
+              label="การจัดการบัญชีลงทุน"
             />
             <ProfileMenuItem
               icon={<Settings className="w-full h-full" />}

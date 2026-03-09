@@ -45,7 +45,7 @@ export function RewardsPage() {
     },
     {
       icon: CreditCard,
-      label: 'ภาริจัดการบัญชีลงทุน',
+      label: 'การจัดการบัญชีลงทุน',
     },
     {
       icon: Settings,

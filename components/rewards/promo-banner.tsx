@@ -18,7 +18,7 @@ export function PromoBanner({
       )}
     >
       <div className="relative z-10 pr-20 sm:pr-32">
-        <h3 className="text-[var(--yuanta-primary)] font-bold text-[18px] mb-2">
+        <h3 className="bg-gradient-to-r from-[#00A1E9] via-[#004EBA] to-[#004EBA] bg-clip-text text-transparent font-bold text-[18px] mb-2">
           {title}
         </h3>
         <p className="max-w-[190px] md:max-w-[430px] xl:max-w-full text-[var(--text-secondary)] text-[14px] mb-1">

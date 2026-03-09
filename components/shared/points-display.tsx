@@ -1,28 +1,18 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
-interface PointsDisplayProps {
-  points: number;
-  size?: 'sm' | 'md' | 'lg';
-  showIcon?: boolean;
-  className?: string;
-}
-
 export function PointsDisplay({
   points,
-  size = 'md',
   showIcon = true,
   className,
 }: PointsDisplayProps) {
-
-
 
   return (
     <div className={cn('flex items-center justify-center gap-2', className)}>
       {showIcon && (
         <div className="text-[var(--yuanta-primary)]">
           <Image
-            src="/Badge/yuanta-icon.png"
+            src="/badge/yuanta-icon.png"
             alt="Yuanta icon"
             width={20}
             height={20}

@@ -17,21 +17,9 @@ import {
 import { ProfileMenuItem } from './profile-menu-item';
 import { ProfilePointsCard } from './profile-points-card';
 import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
 
-interface ProfileModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  userData: {
-    name: string;
-    email: string;
-    badge?: string;
-    points: number;
-    tier: 'Bronze' | 'Silver' | 'Gold' | 'Platinum';
-    expiryDate: string;
-  };
-}
-
-export function ProfileModal({ isOpen, onClose, userData }: ProfileModalProps) {
+export function ProfileCard({ isOpen, onClose, userData }: ProfileCardProps) {
   // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {

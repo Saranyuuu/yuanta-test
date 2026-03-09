@@ -2,16 +2,7 @@
 
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-interface ProfileMenuItemProps {
-  icon: React.ReactNode;
-  label: string;
-  subtitle?: string;
-  rightElement?: React.ReactNode;
-  showArrow?: boolean;
-  onClick?: () => void;
-  className?: string;
-}
+import { Button } from '../ui/button';
 
 export function ProfileMenuItem({
   icon,

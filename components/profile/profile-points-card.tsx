@@ -2,15 +2,6 @@
 
 import { TierBadge } from '@/components/shared/tier-badge';
 import { cn } from '@/lib/utils';
-import { Button } from '../ui/button';
-
-interface ProfilePointsCardProps {
-  points: number;
-  expiryDate: string;
-  tier: 'Bronze' | 'Silver' | 'Gold' | 'Platinum';
-  onExchange?: () => void;
-  className?: string;
-}
 
 export function ProfilePointsCard({
   points,
@@ -50,13 +41,11 @@ export function ProfilePointsCard({
         <TierBadge tier={tier} variant="default" className="bg-white/20 text-white" />
       </div>
       <div className="relative z-10">
-        <Button
-          variant="default"
-          size="sm"
+        <button
           className="w-full h-[28px] bg-white text-[var(--yuanta-primary-accent)] font-semibold rounded-md hover:bg-white/90 border border-black/10 transition-colors text-[14px]"
         >
           แลกคะแนน
-        </Button>
+        </button>
       </div>
     </div>
   );

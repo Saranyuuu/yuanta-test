@@ -114,7 +114,7 @@ export function RewardsPage() {
                 {mockUser.badge && (
                   <span className="w-[66px] h-[24px] flex items-center justify-center gap-[2px] xl:mt-2 bg-[#F7EDE2] rounded-[4px] text-[12px] text-[#D35533] font-medium">
                     <Image
-                      src="/Badge/Badge%20icon.png"
+                      src="/Badge/badge-icon.png"
                       alt="User badge"
                       width={16}
                       height={16}

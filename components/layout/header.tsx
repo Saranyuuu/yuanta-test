@@ -2,7 +2,6 @@
 
 import { Search, MessageSquare, Bell, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '../ui/button';
 
 interface HeaderProps {
   showIcons?: boolean;
@@ -20,7 +19,7 @@ export function Header({ showIcons = true, showCloseButton = false, onClose, cla
           <div className="flex items-center gap-2">
             <div className="w-full h-full flex items-center justify-center">
               <img
-                src="/Logo/Logo yuanta.png"
+                src="/logo/logo yuanta.png"
                 alt="Yuanta Securities"
                 className="w-full h-full object-contain"
               />
@@ -48,14 +47,13 @@ export function Header({ showIcons = true, showCloseButton = false, onClose, cla
 
           {/* Close Button */}
           {showCloseButton && onClose && (
-            <Button
-              variant="ghost"
+            <button
               onClick={onClose}
               className="p-2 hover:bg-[var(--bg-secondary)] rounded-full transition-colors cursor-pointer"
               aria-label="Close"
             >
               <X className="w-6 h-6 text-[var(--text-secondary)]" />
-            </Button>
+            </button>
           )}
         </div>
       </div>

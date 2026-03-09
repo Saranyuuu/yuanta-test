@@ -6,7 +6,7 @@ import { PointsDisplay } from '@/components/shared/points-display';
 import { cn } from '@/lib/utils';
 import { ExchangeCard } from './exchange-card';
 import { ChevronRight, Gift, ShoppingCart } from 'lucide-react';
-import { Button } from '../ui/button';
+
 
 export function PointsCard({
   points,

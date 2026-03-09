@@ -2,7 +2,7 @@
 
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '../ui/button';
+
 
 export function ProfileMenuItem({
   icon,
